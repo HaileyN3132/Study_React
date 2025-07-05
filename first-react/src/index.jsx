@@ -3,7 +3,8 @@ const root = createRoot(document.getElementById("root"));
 
 function Page() {
   return (
-    <div>
+    // Using <></> instead of Fragment or unecessary <div>
+    <>
       <header>
         <img src="src/assets/react.svg" alt="React logo" />
       </header>
@@ -18,7 +19,7 @@ function Page() {
         </ol>
       </main>
       <footer>© 2025 Hailey development. All rights reserved.</footer>
-    </div>
+    </>
   );
 }
 
