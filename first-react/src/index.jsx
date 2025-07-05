@@ -1,13 +1,12 @@
 import { createRoot } from "react-dom/client";
 const root = createRoot(document.getElementById("root"));
 
-/** Mini Challenge:
+/** Challenge:
+ * Move the `main` element into its own component called "MainContent"
+ * and render that component inside the Page component.
  *
- * Move the `header` element from the Page component into
- * its own component called "Header"
- *
- * Then render an instance of the Header component inside
- * the Page component where the `header` used to be.
+ * Do the same with the `footer` element, moving it into a new
+ * component called "Footer"
  */
 
 function Header() {
@@ -18,22 +17,31 @@ function Header() {
   );
 }
 
+function MainContent() {
+  return (
+    <main>
+      <h1>Reasons I'm excited to learn React</h1>
+
+      <ol>
+        <li>Get familiar with front end technologies</li>
+        <li>Curiuous about this framework</li>
+        <li>Be able to add React in my personal project</li>
+      </ol>
+    </main>
+  );
+}
+
+function Footer() {
+  return <footer>© 2025 Hailey development. All rights reserved.</footer>;
+}
+
 function Page() {
   return (
     // Using <></> instead of Fragment or unecessary <div>
     <>
       <Header />
-
-      <main>
-        <h1>Reasons I'm excited to learn React</h1>
-
-        <ol>
-          <li>Get familiar with front end technologies</li>
-          <li>Curiuous about this framework</li>
-          <li>Be able to add React in my personal project</li>
-        </ol>
-      </main>
-      <footer>© 2025 Hailey development. All rights reserved.</footer>
+      <MainContent />
+      <Footer />
     </>
   );
 }
