@@ -4,19 +4,22 @@ const root = createRoot(document.getElementById("root"));
 /**
  * Challenge:
  *
- * - Add a `nav` > `ul` > `li` (x3). The 3 items should say:
- *   "Pricing", "About", and "Contact"
+ * Using flexbox, line up the `li`s horizontally and put them inline
+ * with the React logo.
+ *
+ * NOTE: for practice's sake, don't select any
+ * elements, but use classes for all styling.
  */
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <img src="src/assets/react.svg" alt="React logo" />
       <nav>
-        <ul>
-          <li>Pricing</li>
-          <li>About</li>
-          <li>Contact</li>
+        <ul className="nav-list">
+          <li className="nav-list-item">Pricing</li>
+          <li className="nav-list-item">About</li>
+          <li className="nav-list-item">Contact</li>
         </ul>
       </nav>
     </header>
