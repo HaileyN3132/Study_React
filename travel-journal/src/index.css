@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .header > img {
@@ -22,4 +23,79 @@ body {
   color: white;
   font-size: 15px;
   font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  height: 168px;
+  width: 500px;
+}
+
+.section > img {
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.location {
+  height: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.location > img {
+  width: 10px;
+  height: 14px;
+}
+
+.location > span {
+  width: 40px;
+  height: 10px;
+  letter-spacing: 1.7px;
+  margin-left: 5px;
+  margin-right: 2.3rem;
+}
+
+.location > a {
+  font-size: 15px;
+  color: #928f9c;
+  text-underline-offset: 3.2px;
+}
+
+.location > a:visited {
+  color: #928f9c;
+}
+
+.main > h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.main > h3 {
+  font-size: 13px;
+}
+
+.main > p {
+  max-width: 400px;
+  height: 45px;
+  font-size: 12px;
+  margin: 0;
+}
+
+.container > img {
+  margin-top: 20px;
 }
