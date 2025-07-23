@@ -18,16 +18,16 @@ export default function Entry(props) {
   return (
     <div className="container">
       <section className="section">
-        <img src={props.img.src} alt={props.img.alt} />
+        <img src={props.entry.img.src} alt={props.entry.img.alt} />
         <main className="main">
           <div className="location">
             <img src="src/assets/marker.png" alt="" />
-            <span>{props.country}</span>
-            <a href={props.googleMapsLink}>View on Google Maps</a>
+            <span>{props.entry.country}</span>
+            <a href={props.entry.googleMapsLink}>View on Google Maps</a>
           </div>
-          <h1>{props.title}</h1>
-          <h3>{props.dates}</h3>
-          <p>{props.text}</p>
+          <h1>{props.entry.title}</h1>
+          <h3>{props.entry.dates}</h3>
+          <p>{props.entry.text}</p>
         </main>
       </section>
       <img src="src/assets/line-16.png" alt="" />
