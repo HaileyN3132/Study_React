@@ -2,9 +2,8 @@ import React from "react";
 
 export default function Main() {
   /**
-   * Challenge: Update our app so that when the user enters a
-   * new ingredient and submits the form, it adds that new
-   * ingredient to our list!
+   * Challenge: use form action instead of onSubmit to
+   * handle the data from the form
    */
 
   const [ingredients, setIngredients] = React.useState([]);
@@ -12,9 +11,7 @@ export default function Main() {
     <li key={ingredient}>{ingredient}</li>
   ));
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+  function addIngredients(formData) {
     const newIngredient = formData.get("ingredient");
 
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
@@ -22,7 +19,7 @@ export default function Main() {
 
   return (
     <main className="search-container">
-      <form onSubmit={handleSubmit} className="add-ingredient-form" action="">
+      <form action={addIngredients} className="add-ingredient-form">
         <input
           name="ingredient"
           type="text"
