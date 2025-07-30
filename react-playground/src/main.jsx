@@ -10,7 +10,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/*<ComplexObject />*/}
     {/*<FormBasic />*/}
-    {/*<JokeApp />*/}
-    <ConditionalRendering />
+    <JokeApp />
+    {/*<ConditionalRendering />*/}
   </StrictMode>
 );
