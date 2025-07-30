@@ -3,10 +3,13 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import ComplexObject from "./ComplexObject.jsx";
 import FormBasic from "./FormBasic";
+import JokeApp from "./JokeApp.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/*<ComplexObject />*/}
-    <FormBasic />
+    {/*<FormBasic />*/}
+
+    <JokeApp />
   </StrictMode>
 );
