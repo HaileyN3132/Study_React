@@ -26,6 +26,9 @@ header > img {
 
 main {
   margin: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .add-ingredient-form {
@@ -57,4 +60,60 @@ main {
   content: "+";
   margin-right: 15px;
   font-size: 0.875rem;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  width: 594px;
+}
+
+ul {
+  width: 549px;
+  padding: 0;
+}
+
+.get-recipe-container {
+  width: 594px;
+  height: 109px;
+  display: flex;
+  background-color: #f0efeb;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  gap: 120px;
+}
+
+.get-recipe-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 8px;
+}
+
+.get-recipe-container > div > h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.get-recipe-container > div > span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.get-recipe-container > button {
+  width: 115px;
+  height: 38px;
+  border-radius: 6px;
+  color: white;
+  background-color: #d17557;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
 }
