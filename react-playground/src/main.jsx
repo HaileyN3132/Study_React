@@ -6,13 +6,15 @@ import FormBasic from "./FormBasic";
 import JokeApp from "./JokeApp.jsx";
 import ConditionalRendering from "./ConditionalRendering.jsx";
 import PassPropsAsState from "./PassPropsAsState.jsx";
+import PassingDataAroundReact from "./PassingDataAroundReact.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ComplexObject />
+    {/*<ComplexObject />*/}
     {/*<FormBasic />*/}
     {/*<JokeApp />*/}
     {/*<ConditionalRendering />*/}
     {/*<PassPropsAsState /> */}
+    <PassingDataAroundReact />
   </StrictMode>
 );
