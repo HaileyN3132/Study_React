@@ -14,8 +14,9 @@ export default function Main() {
 
   /**
    * Challenge:
-   * Using conditional rendering, only render the new <section> IF
-   * there are ingredients added to the list of ingredients.
+   * Only display the div.get-recipe-container if the ingredients list
+   * has more than 3 items in it. (Fewer than that and it might not
+   * give great results from the chef 🤖👩‍🍳)
    */
 
   return (
@@ -30,17 +31,19 @@ export default function Main() {
         <button>Add ingredients</button>
       </form>
 
-      {ingredientsListItems.length > 0 && (
+      {ingredients.length > 0 && (
         <section>
           <h2>Ingredients on hand:</h2>
           <ul>{ingredientsListItems}</ul>
-          <div className="get-recipe-container">
-            <div>
-              <h3>Ready for a recipe?</h3>
-              <span>Generate a recipe from your list of ingredients</span>
+          {ingredients.length > 3 && (
+            <div className="get-recipe-container">
+              <div>
+                <h3>Ready for a recipe?</h3>
+                <span>Generate a recipe from your list of ingredients</span>
+              </div>
+              <button>Get a recipe</button>
             </div>
-            <button>Get a recipe</button>
-          </div>
+          )}
         </section>
       )}
     </main>
