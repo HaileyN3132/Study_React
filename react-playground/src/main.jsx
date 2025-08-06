@@ -5,12 +5,14 @@ import ComplexObject from "./ComplexObject.jsx";
 import FormBasic from "./FormBasic";
 import JokeApp from "./JokeApp.jsx";
 import ConditionalRendering from "./ConditionalRendering.jsx";
+import PassPropsAsState from "./PassPropsAsState.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/*<ComplexObject />*/}
     {/*<FormBasic />*/}
     {/*<JokeApp />*/}
-    <ConditionalRendering />
+    {/*<ConditionalRendering />*/}
+    <PassPropsAsState />
   </StrictMode>
 );
