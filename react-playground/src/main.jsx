@@ -9,10 +9,10 @@ import PassPropsAsState from "./PassPropsAsState.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/*<ComplexObject />*/}
+    <ComplexObject />
     {/*<FormBasic />*/}
     {/*<JokeApp />*/}
     {/*<ConditionalRendering />*/}
-    <PassPropsAsState />
+    {/*<PassPropsAsState /> */}
   </StrictMode>
 );
