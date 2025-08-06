@@ -1,11 +1,6 @@
 import React from "react";
 
 export default function Main() {
-  /**
-   * Challenge: use form action instead of onSubmit to
-   * handle the data from the form
-   */
-
   const [ingredients, setIngredients] = React.useState([]);
   const ingredientsListItems = ingredients.map((ingredient) => (
     <li key={ingredient}>{ingredient}</li>
@@ -16,6 +11,12 @@ export default function Main() {
 
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
+
+  /**
+   * Challenge:
+   * Using conditional rendering, only render the new <section> IF
+   * there are ingredients added to the list of ingredients.
+   */
 
   return (
     <main className="search-container">
@@ -29,17 +30,19 @@ export default function Main() {
         <button>Add ingredients</button>
       </form>
 
-      <section>
-        <h2>Ingredients on hand:</h2>
-        <ul>{ingredientsListItems}</ul>
-        <div className="get-recipe-container">
-          <div>
-            <h3>Ready for a recipe?</h3>
-            <span>Generate a recipe from your list of ingredients</span>
+      {ingredientsListItems.length > 0 && (
+        <section>
+          <h2>Ingredients on hand:</h2>
+          <ul>{ingredientsListItems}</ul>
+          <div className="get-recipe-container">
+            <div>
+              <h3>Ready for a recipe?</h3>
+              <span>Generate a recipe from your list of ingredients</span>
+            </div>
+            <button>Get a recipe</button>
           </div>
-          <button>Get a recipe</button>
-        </div>
-      </section>
+        </section>
+      )}
     </main>
   );
 }
