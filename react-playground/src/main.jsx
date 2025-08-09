@@ -17,6 +17,6 @@ createRoot(document.getElementById("root")).render(
     {/*<ConditionalRendering />*/}
     {/*<PassPropsAsState /> */}
     {/*<PassingDataAroundReact/>*/}
-    <SoundPads />
+    <SoundPads darkMode={false} />
   </StrictMode>
 );
