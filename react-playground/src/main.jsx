@@ -7,6 +7,7 @@ import JokeApp from "./JokeApp.jsx";
 import ConditionalRendering from "./ConditionalRendering.jsx";
 import PassPropsAsState from "./PassPropsAsState.jsx";
 import PassingDataAroundReact from "./PassingDataAroundReact.jsx";
+import SoundPads from "./SoundPads.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")).render(
     {/*<JokeApp />*/}
     {/*<ConditionalRendering />*/}
     {/*<PassPropsAsState /> */}
-    <PassingDataAroundReact />
+    {/*<PassingDataAroundReact/>*/}
+    <SoundPads />
   </StrictMode>
 );
