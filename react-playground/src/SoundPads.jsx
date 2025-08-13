@@ -3,21 +3,35 @@ import padsData from "./data/pads";
 import Pad from "./components/Pad";
 
 /**
- * Challenge: Create a toggle() function that logs
- * "clicked!" to the console
- *
- * Pass that function down to each of the Pad components
- * and set it up so when they get clicked, the function runs
+ * Challenge:
+ * Call setPads to update the state of the one pad that was
+ * clicked. Map over the previous pads array, and if the current
+ * item you're iterating over has the same id as the `id` passed
+ * to this function, then return a new object with the `on` value
+ * set to the opposite of what it was before.
+ * Otherwise (if the ids don't match), just return the previous
+ * item as it was, unchanged.
  */
 
 export default function SoundPads(props) {
-  function toggle() {
-    console.log("Clicked");
+  const [pads, setPads] = React.useState(padsData);
+
+  function toggle(id) {
+    setPads((prevPads) =>
+      prevPads.map((item) =>
+        item.id === id ? { ...item, on: !item.on } : item
+      )
+    );
   }
 
-  const [pads, setPads] = React.useState(padsData);
   const buttonElemens = pads.map((pad) => (
-    <Pad key={pad.id} color={pad.color} on={pad.on} toggle={toggle} />
+    <Pad
+      id={pad.id}
+      key={pad.id}
+      color={pad.color}
+      on={pad.on}
+      toggle={toggle}
+    />
   ));
 
   return (
