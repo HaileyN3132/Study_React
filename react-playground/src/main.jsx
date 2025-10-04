@@ -9,6 +9,8 @@ import PassPropsAsState from "./PassPropsAsState.jsx";
 import PassingDataAroundReact from "./PassingDataAroundReact.jsx";
 import SoundPads from "./SoundPads.jsx";
 
+import ConditionalRendering2 from "./practices/ConditionalRendering2.jsx";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/*<ComplexObject />*/}
@@ -17,6 +19,8 @@ createRoot(document.getElementById("root")).render(
     {/*<ConditionalRendering />*/}
     {/*<PassPropsAsState /> */}
     {/*<PassingDataAroundReact/>*/}
-    <SoundPads />
+    {/*<SoundPads /> */}
+
+    <ConditionalRendering2 />
   </StrictMode>
 );
