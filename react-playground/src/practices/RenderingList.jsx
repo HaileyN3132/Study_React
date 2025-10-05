@@ -1,10 +1,10 @@
 import groceriesData from "../data/groceriesData";
+import recipesData from "../data/recipesData";
 
 /* 
     Challenge 1: Split a groceries into 2 lists
 
 */
-
 function Item({ name, emoji }) {
   return (
     <li>
@@ -23,31 +23,61 @@ function ListItem({ list }) {
   );
 }
 
-export default function RenderingList() {
-  const keyword = "protein";
+/* 
+    Challenge 2: Nested lists in one component
 
+*/
+
+function Ingredient({ name }) {
+  return <li>{name}</li>;
+}
+
+function Recipe({ id, name, ingredients }) {
+  let ingredientsList = ingredients.map((ingredient) => (
+    <Ingredient key={id + ingredient} name={ingredient} />
+  ));
+
+  return (
+    <>
+      <h2>{name} Recipe</h2>
+      <ul>{ingredientsList}</ul>
+    </>
+  );
+}
+
+export default function RenderingList() {
+  //Challenge 1
+  const keyword = "protein";
   let filteredList = groceriesData.filter((item) => item.type === keyword);
   let remainList = groceriesData.filter((item) => item.type !== keyword);
 
-  /*
-  let fruits = filteredList.map((fruit) => (
-    <Item key={fruit.id} name={fruit.name} emoji={fruit.emoji} />
-  ));
+  // Challenge 2
 
-  let remain = remainList.map((item) => (
-    <Item id={item.id} name={item.name} emoji={item.emoji} />
+  let recipes = recipesData.map((recipe) => (
+    <Recipe
+      key={recipe.id}
+      id={recipe.id}
+      name={recipe.name}
+      ingredients={recipe.ingredients}
+    />
   ));
-*/
 
   return (
-    <section>
-      <h1>Groceries List Rendering Practice</h1>
+    <>
+      <section>
+        <h1>Challenge 2: Nested lists in one component</h1>
+        <div>{recipes}</div>
+      </section>
 
-      <h2>Fruits</h2>
-      <ListItem list={filteredList} />
+      <section>
+        <h1>Challenge 1: Groceries List Rendering Practice</h1>
 
-      <h2>Others </h2>
-      <ListItem list={remainList} />
-    </section>
+        <h2>Fruits</h2>
+        <ListItem list={filteredList} />
+
+        <h2>Others </h2>
+        <ListItem list={remainList} />
+      </section>
+    </>
   );
 }
