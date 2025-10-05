@@ -54,12 +54,7 @@ export default function RenderingList() {
   // Challenge 2
 
   let recipes = recipesData.map((recipe) => (
-    <Recipe
-      key={recipe.id}
-      id={recipe.id}
-      name={recipe.name}
-      ingredients={recipe.ingredients}
-    />
+    <Recipe key={recipe.id} {...recipe} />
   ));
 
   return (
