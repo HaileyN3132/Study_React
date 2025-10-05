@@ -13,11 +13,23 @@ function Item({ name, emoji }) {
   );
 }
 
+function ListItem({ list }) {
+  return (
+    <ul>
+      {list.map((item) => (
+        <Item key={item.id} name={item.name} emoji={item.emoji} />
+      ))}
+    </ul>
+  );
+}
+
 export default function RenderingList() {
-  const keyword = "vegetable";
+  const keyword = "protein";
+
   let filteredList = groceriesData.filter((item) => item.type === keyword);
   let remainList = groceriesData.filter((item) => item.type !== keyword);
 
+  /*
   let fruits = filteredList.map((fruit) => (
     <Item key={fruit.id} name={fruit.name} emoji={fruit.emoji} />
   ));
@@ -25,15 +37,17 @@ export default function RenderingList() {
   let remain = remainList.map((item) => (
     <Item id={item.id} name={item.name} emoji={item.emoji} />
   ));
+*/
+
   return (
     <section>
       <h1>Groceries List Rendering Practice</h1>
 
       <h2>Fruits</h2>
-      <ul>{fruits}</ul>
+      <ListItem list={filteredList} />
 
       <h2>Others </h2>
-      <ul>{remain}</ul>
+      <ListItem list={remainList} />
     </section>
   );
 }
