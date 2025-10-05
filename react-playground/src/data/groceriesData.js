@@ -59,4 +59,16 @@ export default [
     type: "fruit",
     emoji: "🍉",
   },
+  {
+    id: 11,
+    name: "milk",
+    type: "diary",
+    emoji: "🥛",
+  },
+  {
+    id: 12,
+    name: "chicken",
+    type: "protein",
+    emoji: "🍗",
+  },
 ];
