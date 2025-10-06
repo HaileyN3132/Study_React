@@ -45,6 +45,19 @@ function Recipe({ id, name, ingredients }) {
   );
 }
 
+/* 
+    Challenge 3: List with a separator
+
+*/
+const poem = {
+  lines: [
+    "I write, erase, rewrite",
+    "Erase again, and then",
+    "I write, erase, rewrite",
+    "A poppy blooms.",
+  ],
+};
+
 export default function RenderingList() {
   //Challenge 1
   const keyword = "protein";
@@ -57,8 +70,25 @@ export default function RenderingList() {
     <Recipe key={recipe.id} {...recipe} />
   ));
 
+  //Challenge 3
+  let poemList = [];
+  let i = 0;
+  for (; i < poem.lines.length; i++) {
+    if (i === 0 || i === poem.lines.length - 1) {
+      poemList.push(<p>{poem.lines[i]}</p>);
+    } else {
+      poemList.push(<p>{poem.lines[i]}</p>);
+      poemList.push(<hr />);
+    }
+  }
+
   return (
     <>
+      <section>
+        <h1>Challenge 3: List with a separator</h1>
+        <article>{poemList}</article>
+      </section>
+
       <section>
         <h1>Challenge 2: Nested lists in one component</h1>
         <div>{recipes}</div>
