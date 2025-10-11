@@ -12,6 +12,7 @@ import SoundPads from "./SoundPads.jsx";
 import ConditionalRendering2 from "./practices/ConditionalRendering2.jsx";
 import RenderingList from "./practices/RenderingList.jsx";
 import FixEventHandler from "./practices/FixEvenHandler.jsx";
+import WireUpEvent from "./practices/WireUpEvents.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/*<ComplexObject />*/}
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")).render(
 
     {/*<ConditionalRendering2 /> */}
     {/*<RenderingList / > */}
-    <FixEventHandler />
+    {/*<FixEventHandler /> */}
+    <WireUpEvent />
   </StrictMode>
 );
